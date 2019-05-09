@@ -146,7 +146,7 @@ public class RestTest{
         String endpoint = "/api/users";
 
         //создаём тело запроса
-        String requestBody="{\"name\": \"morpheus\",\"job\": \"leader\"}";
+        String requestBody ="{\"name\": \"morpheus\",\"job\": \"leader\"}";
         //Выполняем REST POST запрос с нашими параметрами
         // и сохраняем результат в переменную response.
         HttpResponse response = HttpClientHelper.post(URL+endpoint,requestBody);
