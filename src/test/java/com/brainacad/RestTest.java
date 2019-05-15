@@ -179,9 +179,9 @@ public class RestTest{
         Assert.assertEquals("Response status code should be 200", 200, statusCode);
 
         String body = HttpClientHelper.getBodyFromResponse(response);
-        String JsonPath = "$.data[2].name,year,color";
+        String JsonPath = "$.data[*].name";
         List ListResource = listFromJSONByPath(body, JsonPath);
-        List ExpectedUser = Arrays.asList("true red", 2002, "#BF1932");
+        List ExpectedUser = Arrays.asList("cerulean","fuchsia rose","true red");
         Assert.assertEquals("Error message", ExpectedUser, ListResource);
         System.out.println(body);
     }
