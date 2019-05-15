@@ -1,4 +1,4 @@
-package com.brainacad;
+/*package com.brainacad;
 
 import com.github.fge.jsonschema.core.report.ProcessingReport;
 import org.apache.http.HttpResponse;
@@ -50,7 +50,7 @@ public class RestTest{
         //Конвертируем входящий поток тела ответа в строку
         String body=HttpClientHelper.getBodyFromResponse(response);
         System.out.println(body);
-        Assert.assertNotEquals("Body shouldn't be null", null, body);
+        Assert.assertNotEquals("Body should not be null", null, body);
     }
 
     @Test//POST метод
@@ -85,7 +85,7 @@ public class RestTest{
         //Конвертируем входящий поток тела ответа в строку
         String body=HttpClientHelper.getBodyFromResponse(response);
         System.out.println(body);
-        Assert.assertNotEquals("Body shouldn't be null", null, body);
+        Assert.assertNotEquals("Body should not be null", null, body);
     }
 
     //TODO: напишите по тесткейсу на каждый вариант запроса на сайте https://reqres.in
@@ -146,7 +146,7 @@ public class RestTest{
         String endpoint = "/api/users";
 
         //создаём тело запроса
-        String requestBody ="{\"name\": \"morpheus\",\"job\": \"leader\"}";
+        String requestBody="{\"name\": \"morpheus\",\"job\": \"leader\"}";
         //Выполняем REST POST запрос с нашими параметрами
         // и сохраняем результат в переменную response.
         HttpResponse response = HttpClientHelper.post(URL+endpoint,requestBody);
@@ -155,7 +155,7 @@ public class RestTest{
         String body = HttpClientHelper.getBodyFromResponse(response);
         String Create = stringFromJSONByPath(body, "$..createAt");
 
-        int statusCode = response.getStatusLine().getStatusCode();
+        int statusCode = response.getStatusLine().getStatusCode(); //блок проверки статус кода
         System.out.println("Response Code : " + statusCode);
         Assert.assertEquals("Response status code should be 201",201, statusCode);
 
@@ -233,4 +233,4 @@ public class RestTest{
         Assert.assertTrue(result.toString(),result.isSuccess());
     }
 }
-
+*/

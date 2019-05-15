@@ -7,7 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.fge.jsonschema.core.report.ProcessingReport;
 import com.github.fge.jsonschema.main.JsonSchema;
 import com.github.fge.jsonschema.main.JsonSchemaFactory;
-import javafx.scene.shape.Path;
+
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -25,5 +25,4 @@ public class MyJsonValidator {
         JsonSchema schema = factory.getJsonSchema(schemaNode);
         return schema.validate(currJson);
     }
-
 }

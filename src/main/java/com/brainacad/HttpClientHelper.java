@@ -20,7 +20,7 @@ public class HttpClientHelper {
 
     public static HttpResponse get(String endpointUrl, String parameters) throws IOException {
         //Создаём переменую headers типа Map
-        Map<String, String> headers = new HashMap<>();
+        Map<String, String> headers = new HashMap();
         //Добавляем в headers наш заголовок
         headers.put("User-Agent", "My-Test-User-Agent");
              return get(endpointUrl, parameters, headers);
@@ -49,7 +49,7 @@ public class HttpClientHelper {
     public static HttpResponse post(String endpointUrl, String parameters) throws IOException {
 
         //Создаём переменую headers типа Map
-        Map<String, String> headers=new HashMap<>();
+        Map<String, String> headers=new HashMap();
         //Добавляем в headers наш заголовок
         headers.put("User-Agent", "My-Test-User-Agent");
               return post(endpointUrl, parameters, headers);
